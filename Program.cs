@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -34,42 +35,33 @@ class Program
 
     static void Main()
     {
-        string filePath = @"D:\sharps\1 lab\ColorInTheText\aeroport.txt";
+        string filePath = @"D:\sharps\1lab\ColorInTheText\aeroport.txt";
 
         string text = File.ReadAllText(filePath);
         Console.WriteLine("Файл загружен");
-        List<string> words = GetWords(text);
-        Console.WriteLine($"Распознано {words.Count} слов");
+        text = text.ToLower();
+        string[] splittedText = Regex.Split(text, @"[\p{P}\s\r\n]+");
+        Console.WriteLine($"Распознано {splittedText.Length} слов");
 
-        List<Color> foundColors = FindColorsInText(words);
+        List<Color> foundColors = FindColorsInText(splittedText);
         Console.WriteLine($"Найдено {foundColors.Count} цветов:");
     }
 
-    static List<string> GetWords(string text)
-    {
-        char[] separators = { ' ', ',', '.', '!', '?', ';', ':', '\t', '\n', '\r', '(', ')', '[', ']', '{', '}', '"', '\'' };
 
-        return text.Split(separators, StringSplitOptions.RemoveEmptyEntries)
-                   .Select(word => word.ToLower())
-                   .ToList();
-    }
-
-    static List<Color> FindColorsInText(List<string> words)
+    static List<Color> FindColorsInText(string[] words)
     {
         List<Color> foundColors = new List<Color>();
-
         foreach (string word in words)
         {
             foreach (var colorMapping in ColorMap)
             {
-                if (word.Contains(colorMapping.Key, StringComparison.OrdinalIgnoreCase))
+                if (word.Contains(colorMapping.Key))
                 {
                     foundColors.Add(colorMapping.Value);
-                    break;
+                    break; 
                 }
             }
         }
-
         return foundColors;
     }
 }
