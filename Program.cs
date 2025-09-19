@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Drawing.Imaging;
 
 class Program
 {
-    static Dictionary<string, Color> ColorMap = new Dictionary<string, Color>(StringComparer.OrdinalIgnoreCase)
+    static Dictionary<string, Color> Colors = new Dictionary<string, Color>(StringComparer.OrdinalIgnoreCase)
     {
         { "красн", Color.Red },
         { "ал", Color.Crimson },
@@ -32,12 +33,38 @@ class Program
         { "розов", Color.Pink },
         { "бирюз", Color.Turquoise },
     };
+    static Dictionary<string, string[]> ColorEndings = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+    {
+        { "красн", new[] { "ый", "ая", "ое", "ые", "енький", "оватый", "" } },
+        { "ал", new[] { "ый", "ая", "ое", "ые", "" } },
+        { "багр", new[] { "овый", "ая", "ое", "ые", "" } },
+        { "зелен", new[] { "ый", "ая", "ое", "ые", "енький", "оватый", "" } },
+        { "изумруд", new[] { "ный", "ная", "ное", "ные", "" } },
+        { "малахит", new[] { "овый", "ая", "ое", "ые", "" } },
+        { "син", new[] { "ий", "яя", "ее", "ие", "енький", "" } },
+        { "голуб", new[] { "ой", "ая", "ое", "ые", "енький", "" } },
+        { "лазур", new[] { "ный", "ная", "ное", "ные", "" } },
+        { "ультрамарин", new[] { "овый", "ая", "ое", "ые", "" } },
+        { "желт", new[] { "ый", "ая", "ое", "ые", "енький", "оватый", "" } },
+        { "золот", new[] { "ой", "ая", "ое", "ые", "истый", "" } },
+        { "лимон", new[] { "ный", "ная", "ное", "ные", "" } },
+        { "бел", new[] { "ый", "ая", "ое", "ые", "енький", "" } },
+        { "черн", new[] { "ый", "ая", "ое", "ые", "енький", "" } },
+        { "сер", new[] { "ый", "ая", "ое", "ые", "енький", "" } },
+        { "фиолетов", new[] { "ый", "ая", "ое", "ые", "" } },
+        { "лилов", new[] { "ый", "ая", "ое", "ые", "" } },
+        { "оранжев", new[] { "ый", "ая", "ое", "ые", "" } },
+        { "коричнев", new[] { "ый", "ая", "ое", "ые", "" } },
+        { "розов", new[] { "ый", "ая", "ое", "ые", "енький", "" } },
+        { "бирюз", new[] { "овый", "ая", "ое", "ые", "" } },
+    };
 
     static void Main()
     {
-        string filePath = @"D:\sharps\1lab\ColorInTheText\aeroport.txt";
+        string filePath = @"D:\csharp\1lab\ColorInTheText\";
+        string textName = "aeroport.txt";
 
-        string text = File.ReadAllText(filePath);
+        string text = File.ReadAllText(filePath+textName);
         Console.WriteLine("Файл загружен");
         text = text.ToLower();
         string[] splittedText = Regex.Split(text, @"[\p{P}\s\r\n]+");
@@ -45,7 +72,17 @@ class Program
 
         List<Color> foundColors = FindColorsInText(splittedText);
         Console.WriteLine($"Найдено {foundColors.Count} цветов:");
+        var colorGroups = foundColors.GroupBy(c => c.Name)
+                                    .OrderByDescending(g => g.Count());
+
+        foreach (var group in colorGroups)
+        {
+            Console.WriteLine($"{group.Key}: {group.Count()} раз");
+        }
     }
+    static Bitmap bitmap = new Bitmap(100, 100);
+    static Graphics graphics = Graphics.FromImage(bitmap);
+    static SolidBrush brush = new SolidBrush(Color.White);
 
 
     static List<Color> FindColorsInText(string[] words)
@@ -53,15 +90,33 @@ class Program
         List<Color> foundColors = new List<Color>();
         foreach (string word in words)
         {
-            foreach (var colorMapping in ColorMap)
+            if (string.IsNullOrWhiteSpace(word) || word.Length < 3)
+                continue;
+
+            foreach (var colorBase in ColorEndings)
             {
-                if (word.Contains(colorMapping.Key))
+                string baseWord = colorBase.Key;
+                string[] endings = colorBase.Value; 
+
+                if (word.StartsWith(baseWord))
                 {
-                    foundColors.Add(colorMapping.Value);
+                    string restOfWord = word.Substring(baseWord.Length);
+                    foreach (string ending in endings)
+                    {
+                        if (restOfWord == ending)
+                        {
+                            if (Colors.TryGetValue(baseWord, out Color color))
+                            {
+                                foundColors.Add(color);
+                            }
+                            break;
+                        }
+                    }
                     break; 
                 }
             }
         }
         return foundColors;
     }
+
 }
