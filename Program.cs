@@ -79,6 +79,15 @@ class Program
         {
             Console.WriteLine($"{group.Key}: {group.Count()} раз");
         }
+        graphics.Clear(Color.White);
+        int x = 0, y = 0;
+        foreach (Color color in foundColors)
+        {
+            DrawPixel(color, ref x, ref y);
+        }
+        string imagePath = filePath + "Colors.png";
+        bitmap.Save(imagePath, ImageFormat.Png);
+        Console.WriteLine($"\nИзображение сохранено: {imagePath}");
     }
     static Bitmap bitmap = new Bitmap(100, 100);
     static Graphics graphics = Graphics.FromImage(bitmap);
@@ -119,4 +128,16 @@ class Program
         return foundColors;
     }
 
+    static void DrawPixel(Color color, ref int x, ref int y, int imageSize = 100, int pixelSize = 10)
+    {
+        brush.Color = color;
+        graphics.FillRectangle(brush, x, y, pixelSize, pixelSize);
+
+        x += pixelSize;
+        if (x >= imageSize)
+        {
+            x = 0;
+            y += pixelSize;
+        }
+    }
 }
