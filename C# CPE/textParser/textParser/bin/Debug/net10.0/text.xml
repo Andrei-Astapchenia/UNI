@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sentences>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>вот </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>здесь</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>«</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>Рикар</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>»</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>юге </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>Франции</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>пытаюсь  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>подмечать</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>уже </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>точки </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>качестве </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>инженера </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>обращал </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>внимания</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>: </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>последовательность </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>зажигания</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>свист</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>рев </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>– </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>ощущение </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>такое</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>будто </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>завернут </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>WOOOW </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кокон</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>совершенно </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>один</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Пробирает </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>костей</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кажется</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>нахлынувших </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>чувств </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>можешь </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>пошевелиться</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Нервы </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>сдают</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>остро </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>ощущаешь  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>клаустрофобию</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>сразу </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>предупредили</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>: </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>«</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>аккуратен </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>со </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>сцеплением</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>иначе </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>машина  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>заглохнет</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>»</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Глохнуть </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>хотел</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>был </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>вопрос </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>гордости</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>: </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мое </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>собственное </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>творение</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Ни  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>случае </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>заглохнуть</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>!</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>заглох</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>всё </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>-</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>карбонового </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>сцепления</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Сначала </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>двигателю </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>нужно </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>придать  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>примерно </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>5500 </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>оборотов </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>минуту </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>– </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>потолка </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>оборотов </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>обычном </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>автомобиле</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>только </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>потом </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>можно </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>немного </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>коснуться </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>педали </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Двигатель </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>снова </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>завели</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>этот </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>раз </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мне </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>удалось </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>тронуться </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>места</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>слишком  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>уверенно</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>уже </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>неплохо</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Если </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>честно</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>для </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>стабильности </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>настроил </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>трекшн</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>-</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>контроль  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>максимум</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>казалось</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>сражаюсь </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>машиной</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>управляю </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>мне  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>был </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мотоциклетный </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>который </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>был </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>готов </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>слететь </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>любую </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>секунду</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>защитный  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>ремешок </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>под </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>подбородком </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>буквально </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>душил</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Когда </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>боксах</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>постоянный </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>шум  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кажется </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мне </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>перебором</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>тут</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>трассе</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>чувство </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>такое</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>Третья </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мировая </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>ворвалась </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>прямо </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кокпит</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>Воздухозаборник </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>располагается </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>прямо </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>над </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>головой</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кажется</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>обрушился </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>шум </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>двигателя </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>V10</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>прямой </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кажется</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>машина </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>вот</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>-</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>вот  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>вырвется </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>-</Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>под </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>твоего </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>слабенького </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>контроля</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>захватывает </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>дух</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>привыкли </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>полностью </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>подчинять </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>машину</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>этом </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>случае </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>невозможно</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>: </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>развивал  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>около </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>780 </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>лс</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>при </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>этом </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>болид </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>весил </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>500 </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кг </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>пилот</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>со </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>получалось</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>,  </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>скажем</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>580 </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>кг</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>, </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>– </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>очень </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>большая </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>пропорция </Value>
+        </Token>
+        <Token xsi:type="Word">
+          <Value>мощности </Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+    <Sentence>
+      <Tokens>
+        <Token xsi:type="Word">
+          <Value>потрясающе</Value>
+        </Token>
+        <Token xsi:type="Punctuation">
+          <Value>.</Value>
+        </Token>
+      </Tokens>
+    </Sentence>
+  </Sentences>
+</Text>

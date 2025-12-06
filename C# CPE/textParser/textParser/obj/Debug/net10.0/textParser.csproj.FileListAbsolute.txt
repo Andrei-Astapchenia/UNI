@@ -1,0 +1,14 @@
+D:\csharp\textParser\textParser\bin\Debug\net10.0\textParser.exe
+D:\csharp\textParser\textParser\bin\Debug\net10.0\textParser.deps.json
+D:\csharp\textParser\textParser\bin\Debug\net10.0\textParser.runtimeconfig.json
+D:\csharp\textParser\textParser\bin\Debug\net10.0\textParser.dll
+D:\csharp\textParser\textParser\bin\Debug\net10.0\textParser.pdb
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.AssemblyInfoInputs.cache
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.AssemblyInfo.cs
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.csproj.CoreCompileInputs.cache
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.dll
+D:\csharp\textParser\textParser\obj\Debug\net10.0\refint\textParser.dll
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.pdb
+D:\csharp\textParser\textParser\obj\Debug\net10.0\textParser.genruntimeconfig.cache
+D:\csharp\textParser\textParser\obj\Debug\net10.0\ref\textParser.dll
