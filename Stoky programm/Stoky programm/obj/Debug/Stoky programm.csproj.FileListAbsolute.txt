@@ -1,0 +1,15 @@
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.csproj.AssemblyReference.cache
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\MainWindow.g.cs
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\App.g.cs
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm_MarkupCompile.cache
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm_MarkupCompile.lref
+D:\2 course\courseWork\Stoky programm\Stoky programm\bin\Debug\Stoky programm.exe.config
+D:\2 course\courseWork\Stoky programm\Stoky programm\bin\Debug\Stoky programm.exe
+D:\2 course\courseWork\Stoky programm\Stoky programm\bin\Debug\Stoky programm.pdb
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\MainWindow.baml
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.g.resources
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky_programm.Properties.Resources.resources
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.csproj.GenerateResource.cache
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.csproj.CoreCompileInputs.cache
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.exe
+D:\2 course\courseWork\Stoky programm\Stoky programm\obj\Debug\Stoky programm.pdb
