@@ -1,0 +1,68 @@
+﻿<Window x:Class="Stoky_programm.Windows.WindowAddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Добавление продукта" Height="500" Width="450"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        WindowStyle="None" Background="Transparent">
+
+    <Border CornerRadius="15" Background="#08292b" Margin="10" MouseDown="Border_MouseDown">
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="#032029" CornerRadius="10" Padding="10" Margin="0,0,0,10">
+                <StackPanel>
+                    <TextBlock Text="Добавление нового продукта" 
+                               Foreground="White" FontSize="18" FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Background="#1a62ab" CornerRadius="10" Padding="15">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <Label Content="Название продукта:" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="txtName" Height="30" Margin="0,0,0,10" FontSize="14" Foreground="White"/>
+
+                        <Label Content="Производитель:" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="txtManufacturer" Height="30" Margin="0,0,0,10" FontSize="14" Foreground="White"/>
+
+                        <Label Content="Модель:" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="txtModel" Height="30" Margin="0,0,0,10" FontSize="14" Foreground="White"/>
+
+                        <Label Content="Категория:" Foreground="White" FontWeight="Bold"/>
+                        <ComboBox x:Name="cmbCategory" Height="30" Margin="0,0,0,10" FontSize="14"/>
+
+                        <Label Content="Количество:" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="txtQuantity" Foreground="White" Height="30" Margin="0,0,0,10" FontSize="14" Text="1"/>
+
+                        <Label Content="Цена за единицу (руб.):" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="txtPrice" Height="30" Margin="0,0,0,15" FontSize="14" Foreground="White"/>
+                        
+                        <Label Content="Дата производства:" Foreground="White" FontWeight="Bold"/>
+                        <DatePicker x:Name="ProductionDate" Height="30" Margin="0,0,0,10" 
+                                    SelectedDate="{x:Static sys:DateTime.Today}" FontSize="14" Foreground="White"/>
+
+                        <Label Content="Дата добавления на склад:" Foreground="White" FontWeight="Bold"/>
+                        <DatePicker x:Name="AddedDate" Height="30" Margin="0,0,0,15" 
+                                    SelectedDate="{x:Static sys:DateTime.Today}" FontSize="14" Foreground="White"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <Border Grid.Row="2" Background="#032029" CornerRadius="10" Padding="10" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Отмена" Width="100" Height="35" 
+                            Background="#1a7a6d" Foreground="White" FontWeight="Bold"
+                            Margin="0,0,10,0" Click="ButtonCancel_Click"/>
+                    <Button Content="Добавить" Width="100" Height="35" 
+                            Background="#0d7851" Foreground="White" FontWeight="Bold"
+                            Click="ButtonAdd_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

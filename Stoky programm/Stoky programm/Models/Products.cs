@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+
 
 namespace Stoky_programm.Models
 {
+    [JsonDerivedType(typeof(Products), typeDiscriminator: "product")]
     public class Products : MaterialObj
     {
         public enum ProductCategory
         {
+            Other,
             Electronics,
             Furniture,
             Tools,
@@ -17,8 +21,7 @@ namespace Stoky_programm.Models
             Food,
             Chemicals,
             BuildingMaterials,
-            Automotive,
-            Other
+            Automotive
         }
         private ProductCategory category;
         private string manufacturer;
@@ -81,19 +84,30 @@ namespace Stoky_programm.Models
                 model = value.Trim();
             }
         }
-
-        //для сегодняшнего
-        public Products(string name, UnitType unit, decimal quantity, double price, ProductCategory category,
-            string manufacturer = null, string model = null): base( name, unit, quantity, price)
+        //только что произведен и добавлен)
+        public Products(string name, UnitType unit, decimal quantity, double price,
+            ProductCategory category, string manufacturer, string model)
+            : base(name, unit, quantity, price)
         {
             Category = category;
             Manufacturer = manufacturer;
             Model = model;
-            ProductionDate = DateTime.Now;
+            ProductionDate = DateTime.Now; 
         }
 
-        public Products(string name,UnitType unit, decimal quantity, double price, DateTime date,
-            ProductCategory category, string manufacturer, string model,DateTime productionDate): base(name,unit, quantity, price, date)
+        // с указанием даты производства
+        public Products(string name, UnitType unit, decimal quantity, double price,
+            ProductCategory category, string manufacturer, string model, DateTime productionDate)
+            : base(name, unit, quantity, price) 
+        {
+            Category = category;
+            Manufacturer = manufacturer;
+            Model = model;
+            ProductionDate = productionDate; 
+        }
+        public Products(string name, UnitType unit, decimal quantity, double price,
+            DateTime addedDate, ProductCategory category, string manufacturer, string model,
+            DateTime productionDate) : base(name, unit, quantity, price, addedDate)
         {
             Category = category;
             Manufacturer = manufacturer;
@@ -116,16 +130,17 @@ namespace Stoky_programm.Models
                 default: return "Неизвестная категория";
             }
         }
-
         public override void Validate()
         {
             base.Validate();
 
             var errors = new List<string>();
-
             if (ProductionDate > DateTime.Now)
                 errors.Add("Production date cannot be in the future");
-
+            if (ProductionDate > Date)  
+                errors.Add("Production date can't be earlier the add to storage Date ");
+            if (ProductionDate == DateTime.MinValue)
+                errors.Add("Need a production date");
             if (errors.Count > 0)
                 throw new InvalidOperationException("Product validation errors: " + string.Join("; ", errors));
         }
@@ -133,6 +148,17 @@ namespace Stoky_programm.Models
         public override string ToString()
         {
             return $"[Продукт]: категория: {GetCategory()}, производитель: {Manufacturer}, наименование: {Model}, {base.ToString()}";
+        }
+
+        [JsonConstructor]
+        public Products(int id, string name, UnitType unit, decimal quantity, double pricePerUnit,
+                DateTime date, bool isActive, ProductCategory category,
+                string manufacturer, string model, DateTime productionDate): base(id, name, unit, quantity, pricePerUnit, date, isActive)
+        {
+            Category = category;
+            Manufacturer = manufacturer;
+            Model = model;
+            ProductionDate = productionDate;
         }
     }
 }

@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Stoky_programm.Models
 {
+    [JsonDerivedType(typeof(Products), typeDiscriminator: "product")]
+    [JsonDerivedType(typeof(EnterpriseAsset), typeDiscriminator: "asset")]
     public abstract class MaterialObj
     {
         public enum UnitType
@@ -15,7 +18,11 @@ namespace Stoky_programm.Models
             Liter,
             Meter
         }
-
+        public enum ActiveType
+        {
+            Active,
+            Deactive
+        }
         private int id;
         private string name;
         private UnitType unit;
@@ -100,6 +107,7 @@ namespace Stoky_programm.Models
                 default:  return "неизв.";
             }
         }
+     
         public double PricePerUnit
         {
             get
@@ -111,7 +119,7 @@ namespace Stoky_programm.Models
                 if (value < 0)
                     throw new ArgumentOutOfRangeException(nameof(PricePerUnit), "Price cannot be negative");
 
-                if (value > 1000000)
+                if (value > 9999999)
                     throw new ArgumentOutOfRangeException(nameof(PricePerUnit), "Price too large");
 
                 if (double.IsNaN(value) || double.IsInfinity(value))
@@ -181,6 +189,13 @@ namespace Stoky_programm.Models
             get { return isActive; }
             set { isActive = value; }
         }
+        public string ActiveStatusText
+        {
+            get
+            {
+                return IsActive ? "Активен" : "Не активен";
+            }
+        }
         //конструктор для сегодняшней даты
         protected MaterialObj(string name, UnitType unit, decimal quantity, double price)
         {
@@ -249,19 +264,48 @@ namespace Stoky_programm.Models
                 errors.Add("Price не может быть отрицательным");
             else if (pricePerUnit > 9999999)
                 errors.Add("Price слишком большая");
-
             if (date == DateTime.MinValue)
                 errors.Add("Date должена быть установлена");
             else if (date > DateTime.Now)
                 errors.Add("Date не может быть в будущем");
-
             if (errors.Count > 0)
                 throw new InvalidOperationException("Ошибки валидации:" + string.Join("; ", errors));
         }
-
+        [JsonIgnore]
+        public string Type
+        {
+            get
+            {
+                if (this is Products) return "Продукт";
+                if (this is EnterpriseAsset) return "Актив";
+                return "Неизвестно";
+            }
+        }
+        public DateTime AddedDate
+        {
+            get { return Date; }
+        }
         public override string ToString()
         {
-            return $"\nОбъект:{Name}, кол-во:{Quantity}, цена за {GetUnitDescription(Unit)}:{PricePerUnit:C}\nдата добавления:{GetDateInfo()}, статус={IsActive}";
+            return $"\nОбъект:{Name}, кол-во:{Quantity}, цена за {GetUnitDescription(Unit)}:{PricePerUnit:C}\nдата добавления:{GetDateInfo()}, статус={ActiveStatusText}";
+        }
+        [JsonConstructor]
+        protected MaterialObj(int id, string name, UnitType unit, decimal quantity, double pricePerUnit, DateTime date, bool isActive)
+        {
+            try
+            {
+                ID = id;
+                Name = name;
+                Unit = unit;
+                Quantity = quantity;
+                PricePerUnit = pricePerUnit;
+                Date = date;
+                IsActive = isActive;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error creating MaterialObj from JSON:" + ex.Message);
+            }
         }
     }
 }

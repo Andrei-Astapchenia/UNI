@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+
 
 namespace Stoky_programm.Models
 {
+    [JsonDerivedType(typeof(EnterpriseAsset), typeDiscriminator: "asset")]
     public class EnterpriseAsset : MaterialObj
     {
         public enum AssetType
@@ -27,7 +30,7 @@ namespace Stoky_programm.Models
         }
         private AssetType asset;
         private Conditions condition;
-        private string inventoryNumber;
+        private int inventoryNumber;
         private DateTime commissioningDate;
         private DateTime? lastService;
 
@@ -58,7 +61,7 @@ namespace Stoky_programm.Models
                 condition = value;
             }
         }
-        public string InventoryNumber
+        public int InventoryNumber
         {
             get
             {
@@ -66,17 +69,9 @@ namespace Stoky_programm.Models
             }
             set
             {
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                    if (value.Length > 10)
-                        throw new ArgumentException("Inventory number too long", nameof(InventoryNumber));
-                    foreach (char c in value)
-                    {
-                        if (!char.IsDigit(c))
-                            throw new ArgumentException("Inventory number can contain only digits", nameof(InventoryNumber));
-                    }
-                }
-                inventoryNumber = value.Trim();
+                if (value <= 0)
+                    throw new ArgumentException("Inventory number must be a positive number", nameof(InventoryNumber));
+                inventoryNumber = value;
             }
         }
 
@@ -103,17 +98,21 @@ namespace Stoky_programm.Models
                     lastService = value;
                     return;
                 }
-                if (value > DateTime.Now || value<CommissioningDate)
-                    throw new ArgumentOutOfRangeException(nameof(LastService), "LastService date can not be in the future or in the past");
+                if (value > DateTime.Now || (value.HasValue && value.Value < CommissioningDate))
+                    throw new ArgumentOutOfRangeException(nameof(LastService), "LastService date can not be in the future or earlier than commissioning date");
                 lastService = value;
             }
         }
 
         //для сегодняшнего
         public EnterpriseAsset(string name, UnitType unit,decimal quantity, double price, 
-            AssetType asset, Conditions condition, string inventoryNumber,DateTime commissioningDate)
+            AssetType asset, Conditions condition, int inventoryNumber,DateTime commissioningDate)
             : base(name, unit, quantity, price)
         {
+            if (quantity != 1)
+            {
+                throw new ArgumentException("Количество активов должно быть равно 1", nameof(quantity));
+            }
             Unit = UnitType.Piece;
             Asset =asset;
             Condition=condition;
@@ -122,10 +121,14 @@ namespace Stoky_programm.Models
             LastService= null;
         }
         public EnterpriseAsset(string name,  UnitType unit, decimal quantity, double price, DateTime date,
-            AssetType asset, Conditions condition, string inventoryNumber, DateTime commissioningDate)
+            AssetType asset, Conditions condition, int inventoryNumber, DateTime commissioningDate)
             : base(name, unit, quantity, price, date)
         {
-            Unit=UnitType.Piece;
+            if (quantity != 1)
+            {
+                throw new ArgumentException("Количество активов должно быть равно 1", nameof(quantity));
+            }
+            Unit =UnitType.Piece;
             Asset = asset;
             Condition = condition;
             InventoryNumber = inventoryNumber;
@@ -157,6 +160,18 @@ namespace Stoky_programm.Models
                 default: return "Неизвестное состояние";
             }
         }
+        public string ServiceStatus
+        {
+            get
+            {
+                if (Condition == Conditions.Broken || Condition == Conditions.Damaged)
+                    return "РЕМОНТ";
+                else if (NeedsService())
+                    return "ОБСЛУЖИВАНИЕ";
+                else
+                    return "НОРМА";
+            }
+        }
         public void Damaged()
         {
             if (condition < Conditions.Damaged) condition = Conditions.Damaged;
@@ -164,8 +179,8 @@ namespace Stoky_programm.Models
 
         public void Repair()
         {
-            if (condition == Conditions.Damaged || condition == Conditions.Broken) condition = Conditions.Satisfactory;
-            lastService = DateTime.Now;
+            if (condition == Conditions.Damaged) condition = Conditions.Satisfactory;
+            LastService = DateTime.Now;
         }
 
         public bool NeedsService()
@@ -193,12 +208,16 @@ namespace Stoky_programm.Models
             DateTime nextService = lastService.Value.AddMonths(serviceInterval);
             return DateTime.Now >= nextService;
         }
+        public string ConditionText => GetCondition();
+        public string AssetTypeDisplay => GetAssetType();
+        public bool NeedsServiceDisplay => NeedsService();
+        public string ConditionDisplay => GetCondition();
         public override void Validate()
         {
             base.Validate();
             var errors = new List<string>();
-            if (string.IsNullOrWhiteSpace(inventoryNumber))
-                errors.Add("need inventory number");
+            if (InventoryNumber <= 0)
+                errors.Add("Inventory number must be possitive");
             if (CommissioningDate > DateTime.Now)
                 errors.Add("Commisioning date cannot be in the future");
             if (LastService.HasValue && LastService.Value < CommissioningDate)
@@ -211,6 +230,18 @@ namespace Stoky_programm.Models
         {
             string needsService = NeedsService() ? "(Требует обслуживания)" : "";
             return $"[Объект предприятия]: {base.ToString()}, тип: {GetAssetType()}, состояние: {GetCondition()} {needsService}, инв.номер: {InventoryNumber}, дата ввода: {CommissioningDate:dd.MM.yyyy}";
+        }
+        [JsonConstructor]
+        public EnterpriseAsset(int id, string name, UnitType unit, decimal quantity,
+                       double pricePerUnit, DateTime date, bool isActive,
+                       AssetType asset, Conditions condition, int inventoryNumber,
+                       DateTime commissioningDate, DateTime? lastService): base(id, name, unit, quantity, pricePerUnit, date, isActive)
+        {
+            Asset = asset;
+            Condition = condition;
+            InventoryNumber = inventoryNumber;
+            CommissioningDate = commissioningDate;
+            LastService = lastService;
         }
     }
 }
