@@ -1,0 +1,75 @@
+﻿<Window x:Class="FFS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fast Food Simulator" Height="850" Width="1300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Интервал клиентов:" VerticalAlignment="Center"/>
+            <TextBox x:Name="CustomerIntervalBox" Width="60" Margin="5" Text="2500"/>
+
+            <TextBlock Text="Кассир (мс):" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="CashierIntervalBox" Width="60" Margin="5" Text="4000"/>
+            
+            <TextBlock Text="Готовка (мс):" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="CookIntervalBox" Width="60" Margin="5" Text="7000"/>
+            
+            <TextBlock Text="Выдача (мс):" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="ServeIntervalBox" Width="60" Margin="5" Text="2000"/>
+
+            <TextBlock Text="Кассиров:" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="CashierCountBox" Width="40" Margin="5" Text="1"/>
+
+            <TextBlock Text="Поваров:" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="CookCountBox" Width="40" Margin="5" Text="2"/>
+
+            <TextBlock Text="Официантов:" VerticalAlignment="Center" Margin="15,0,0,0"/>
+            <TextBox x:Name="ServerCountBox" Width="40" Margin="5" Text="1"/>
+
+            <Button x:Name="StartButton" Content="Start" Width="80" Margin="20,0,0,0"
+                    Click="StartButton_Click" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+            <Button x:Name="StopButton" Content="Stop" Width="80" Margin="5,0,0,0"
+                    Click="StopButton_Click" IsEnabled="False" Background="#F44336" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+
+        <UniformGrid Grid.Row="1" Rows="1" Columns="4" Margin="10">
+            <Border BorderBrush="#2196F3" BorderThickness="2" Margin="5" Padding="8" Background="#E3F2FD" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="ОЧЕРЕДЬ ЗАКАЗА" FontWeight="Bold" Foreground="#1976D2"/>
+                    <TextBlock x:Name="OrderQueueText" Text="0" FontSize="20" FontWeight="Bold" Foreground="#1976D2"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="#B71C1C" BorderThickness="2" Margin="5" Padding="8" Background="#FFEBEE" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="КУХНЯ" FontWeight="Bold" Foreground="#B71C1C"/>
+                    <TextBlock Text="Готовят:" FontSize="11" Foreground="#666"/>
+                    <TextBlock x:Name="KitchenText" Text="—" FontWeight="Bold" Foreground="#B71C1C"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="#1B5E20" BorderThickness="2" Margin="5" Padding="8" Background="#E8F5E9" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="ВЫДАЧА" FontWeight="Bold" Foreground="#1B5E20"/>
+                    <TextBlock x:Name="ServingText" Text="—" FontWeight="Bold" Foreground="#1B5E20"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="#616161" BorderThickness="2" Margin="5" Padding="8" Background="#F5F5F5" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="ВСЕГО КЛИЕНТОВ" FontWeight="Bold" Foreground="#424242"/>
+                    <TextBlock x:Name="TotalCustomersText" Text="0" FontSize="20" FontWeight="Bold" Foreground="#424242"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <Border Grid.Row="2" BorderBrush="#333" BorderThickness="1" Margin="10" CornerRadius="5">
+            <Canvas x:Name="VisualizationCanvas" Background="#FCFCFC" ClipToBounds="True"/>
+        </Border>
+    </Grid>
+</Window>
